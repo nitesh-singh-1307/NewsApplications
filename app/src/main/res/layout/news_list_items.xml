@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/notificationConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        tools:context=".ui.newslist.NewsActivity">
+
+
+        <ImageView
+            android:id="@+id/imgNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            tools:src="@drawable/ic_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/ic_message_with_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvtNewsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/graphic_medium"
+            android:text="@string/str_selected_country"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgNews" />
+
+
+        <TextView
+            android:id="@+id/tvtNewsDiscription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/graphic_medium"
+            android:text="@string/str_selected_country"
+            android:textColor="@color/black"
+            android:textAlignment="viewStart"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvtNewsTitle" />
+
+        <TextView
+            android:id="@+id/tvtNewsTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/graphic_regular"
+            android:text="@string/str_selected_country"
+            android:textColor="@color/black"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvtNewsDiscription" />
+
+
+        <TextView
+            android:id="@+id/tvRead"
+            style="@style/ucrop_button_background"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/ucrop_background_pink_button"
+            android:text="@string/str_read"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtNewsTime" />
+
+
+        <TextView
+            android:id="@+id/tvSave"
+            style="@style/ucrop_button_background"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/ucrop_background_pink_button"
+            android:text="@string/str_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtNewsTime" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.newslist.NewsDetailsActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glBegin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_15sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glEnd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_15sdp" />
+
+
+        <FrameLayout
+            android:id="@+id/ifFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgFront"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/header_toolbar_white" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tvtDatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/graphic_regular"
+            android:text="29-03-21"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/ifFrame"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toTopOf="@id/ifFrame" />
+
+        <TextView
+            android:id="@+id/tvtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/graphic_regular"
+            android:text="@string/str_selected_country"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toBottomOf="@+id/tvtDatetime" />
+
+        <View
+            android:id="@+id/ivBackground"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cornor_details_radius"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toBottomOf="@+id/tvtTitle" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/ic_placeholder"
+            android:scaleType="fitCenter"
+            app:riv_corner_radius="30dip"
+            app:riv_border_width="2dip"
+            app:riv_border_color="#333333"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat"
+            app:riv_oval="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toBottomOf="@+id/tvtTitle"
+            />
+
+        <TextView
+            android:id="@+id/tvtJobJd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/graphic_regular"
+            android:text="@string/str_selected_country"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/imageProfile"
+            app:layout_constraintBottom_toBottomOf="@id/imageProfile"
+            app:layout_constraintStart_toEndOf="@+id/imageProfile"
+            app:layout_constraintEnd_toStartOf="@+id/tvSave"
+            />
+
+
+        <TextView
+            android:id="@+id/tvSave"
+            style="@style/ucrop_button_background"
+            android:layout_width="wrap_content"
+            android:background="@drawable/ucrop_background_green_button"
+            android:text="@string/str_save"
+            app:layout_constraintTop_toTopOf="@id/imageProfile"
+            app:layout_constraintBottom_toBottomOf="@id/imageProfile"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
